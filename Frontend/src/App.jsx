@@ -29,7 +29,8 @@ export default function App() {
         {!day && <p className="muted">Loading…</p>}
         {day && (
           <>
-            {/* STEP 6: trackers */}
+            {<Trackers day={day} update={update} habits={habits}
+  streaks={stats?.streaks} onHabitsChange={onHabitsChange} />}
             {<Planner day={day} update={update} />}
           </>
         )}

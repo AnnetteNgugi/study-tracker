@@ -1,0 +1,14 @@
+.trk { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.trk-item { background: #fff6f7; border: 1px solid var(--line); border-radius: 14px; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.trk-top { display: flex; justify-content: space-between; }
+.bar { height: 10px; background: #f6d5db; border-radius: 99px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: linear-gradient(90deg, #f6a5b7, #e8708b); transition: width .3s; }
+.trk-ctl { display: flex; align-items: center; gap: 6px; }
+.trk-ctl input { text-align: center; }
+.sub { margin: 18px 0 6px; font-size: .95rem; }
+.habits { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 18px; }
+.habit { display: flex; align-items: center; gap: 10px; justify-content: space-between; }
+.habit label { display: flex; align-items: center; gap: 8px; flex: 1; cursor: pointer; }
+.x { background: none; border: 0; color: var(--ink-soft); font-size: 1.2rem; cursor: pointer; }
+.x:hover { color: var(--accent-d); }
+.add-habit { display: flex; gap: 8px; margin-top: 12px; align-items: center; }
