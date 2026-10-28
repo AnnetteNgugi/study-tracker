@@ -1,0 +1,36 @@
+.line { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+.num {
+  width: 28px; height: 28px; flex: none; display: grid; place-items: center;
+  border: 1.5px solid var(--line); border-radius: 50%; background: #fff5f6; font-size: .85rem;
+}
+.tag { flex: none; width: 84px; text-align: center; background: #f9d3da; border-radius: 12px; padding: 2px 8px; font-size: .8rem; }
+
+/* time table */
+.tt-head, .tt-row { display: grid; grid-template-columns: 100px 1fr; align-items: center; }
+.tt-head { font-weight: 700; font-size: .85rem; text-align: center; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.tt-row { border-bottom: 1px solid #f3cdd5; }
+.tt-time { font-size: .8rem; text-align: center; padding: 6px 2px; border-right: 1px solid var(--line); }
+.tt-row input { border-bottom: 0 !important; padding: 6px 8px !important; }
+
+/* water */
+.jars { display: flex; justify-content: space-between; gap: 4px; }
+.jar-wrap { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; }
+.jar {
+  position: relative; width: 100%; max-width: 30px; height: 38px; cursor: pointer;
+  border: 1.5px solid var(--line); border-radius: 7px 7px 10px 10px;
+  background: #fff7f8; color: transparent; font-size: .9rem;
+}
+.jar::before { content: ''; position: absolute; top: -7px; left: 22%; width: 56%; height: 6px; background: var(--accent); border-radius: 3px; }
+.jar.on { background: #f9c5d0; color: var(--accent-d); }
+
+/* notes */
+.ruled { resize: none; line-height: 26px; border-bottom: 0 !important; background-image: repeating-linear-gradient(transparent 0 25px, #f0bfc9 25px 26px) !important; }
+.hint { margin: 0 0 4px; font-size: .85rem; color: var(--ink-soft); }
+
+/* mood */
+.moods { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 8px; }
+.mood { font: inherit; color: inherit; font-size: .8rem; background: none; border: 0; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.face { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-size: 1.4rem; transition: transform .15s; }
+.mood:hover .face { transform: scale(1.08); }
+.mood.sel .face { outline: 3px solid var(--accent-d); outline-offset: 2px; }
+.mood.sel { font-weight: 700; }

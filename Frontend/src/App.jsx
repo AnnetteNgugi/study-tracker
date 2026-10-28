@@ -30,7 +30,7 @@ export default function App() {
         {day && (
           <>
             {/* STEP 6: trackers */}
-            {/* STEP 5: planner */}
+            {<Planner day={day} update={update} />}
           </>
         )}
         {/* STEP 7: dashboard */}
