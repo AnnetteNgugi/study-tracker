@@ -9,6 +9,8 @@ app = Flask(__name__)
 CORS(app)
 db.init()
 
+from stats import bp as stats_bp
+app.register_blueprint(stats_bp)
 
 def valid_date(s):
     try:
